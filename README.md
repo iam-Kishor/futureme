@@ -1,152 +1,87 @@
-# FutureMe — AI-Powered Personal Reflection Engine
+🚀 Becoming (formerly FutureMe)
 
-FutureMe is a premium, high-fidelity web application built for personal reflection and guidance. Users input their current goals, struggles, and desired guidance tone, and receive an emotional, highly personalized, and actionable letter from their future self, along with an interactive, contextual conversation portal to ask follow-up questions.
+Becoming is an AI-powered personal career planning and self-reflection platform that helps users bridge the gap between who they are today and who they aspire to become.
 
-This project is built under **Nitish’s Founder Labs** with a premium Apple-style dark glassmorphism design.
+Instead of providing generic career advice, Becoming creates a personalized growth journey by combining AI-driven self-reflection, career planning, goal tracking, and future identity coaching into a single experience.
 
----
+The core philosophy is simple:
 
-## Technical Stack & Highlights
+Don't ask AI what to do. Talk to the version of yourself who has already achieved your goals.
 
-- **Frontend**: Single Page Application using clean semantic HTML5, high-performance vanilla JavaScript, and modern responsive CSS with variable-driven styling, backdrop blurs, radial glows, and micro-animations.
-- **Backend**: Node.js + Express server hosting both static files and secure API routes.
-- **AI Engine**: Google Gemini API via the official `@google/generative-ai` SDK, leveraging `gemini-1.5-flash` for super-fast response times.
-- **Unified Architecture**: The Express server hosts the frontend static files on port `5000`, eliminating complex multi-origin CORS configurations and simplifying the setup for live demos down to a single terminal command.
+🌟 Vision
 
----
+Most people know where they want to go but struggle to determine the exact path to get there.
 
-## Project Structure
+Becoming acts as an AI-powered future mentor that helps users:
 
-```text
-futureme/
-├── backend/
-│   ├── public/              # Static frontend assets served by Express
-│   │   ├── index.html       # Clean Apple-style premium interface
-│   │   ├── style.css        # Premium glassmorphic styling system
-│   │   └── script.js        # Form validation, API calls, and chat state engine
-│   ├── server.js            # Node.js + Express backend server
-│   ├── package.json         # Backend dependencies & project scripts
-│   ├── .env                 # Port & Gemini API credentials (local, git-ignored)
-│   └── .env.example         # Template for environment configuration
-└── README.md                # Project documentation
-```
+Discover their future career path
+Identify skill gaps
+Build personalized roadmaps
+Develop consistent habits
+Make better career decisions
+Stay accountable to long-term goals
+✨ Key Features
+🤖 AI Future Self
 
----
+Create an AI version of your future self that provides personalized guidance based on your goals, challenges, and aspirations.
 
-## Installation & Setup
+🎯 Personalized Career Roadmaps
 
-Follow these simple steps to run FutureMe locally:
+Generate structured learning and execution plans tailored to your desired career path.
 
-### 1. Prerequisites
-Ensure you have **Node.js** (v18 or higher) installed on your system. 
+📊 Skill Gap Analysis
 
-### 2. Install Dependencies
-Open a terminal in the `backend` directory and install the necessary npm packages:
-```bash
-cd backend
-npm install
-```
+Compare your current abilities with your target role and receive actionable recommendations.
 
-### 3. Configure Gemini API Key
-1. Obtain an API key from [Google AI Studio](https://aistudio.google.com/).
-2. In the `backend` directory, rename `.env.example` to `.env` or create a new `.env` file:
-   ```bash
-   cp .env.example .env
-   ```
-3. Open the `.env` file and replace `your_gemini_api_key_here` with your actual API key:
-   ```env
-   GEMINI_API_KEY=...your_actual_key_here
-   PORT=5000
-   ```
+💬 AI Reflection Chat
 
-### 4. Run the Application
-Start the unified server in development/start mode:
-```bash
-npm start
-```
-You should see:
-```text
-🚀 FutureMe Backend Server running on Port 5000
-🔗 Local Access: http://localhost:5000
-```
+Have meaningful conversations with your future self to gain clarity, confidence, and direction.
 
-### 5. Access the Web App
-Open your browser and navigate to:
-```text
-http://localhost:5000
-```
-Fill out the details and begin speaking with your future self!
+📈 Progress Tracking
 
----
+Track goals, habits, milestones, and measurable growth over time.
 
-## API Routes Documentation
+🧠 AI Prompt Frameworks
 
-The backend exposes two high-level endpoints:
+Access advanced prompting techniques designed for better self-reflection, career planning, and decision-making.
 
-### 1. POST `/api/generate-futureme`
-Generates the core FutureMe reflection report based on the user's current situation.
-- **Request Body**:
-  ```json
-  {
-    "name": "Nitish",
-    "age": "23",
-    "goal": "Build a successful AI startup",
-    "struggle": "Lack of consistency",
-    "oneYearVision": "Running a profitable AI company",
-    "tone": "Brutally Honest"
-  }
-  ```
-- **Response Schema** (AI outputs strict JSON matching this structure):
-  ```json
-  {
-    "success": true,
-    "data": {
-      "message": "A powerful 120-180 word message from the future self.",
-      "futureIdentity": "A concise description of who the user is becoming.",
-      "nextMoves": ["Action 1", "Action 2", "Action 3"],
-      "habit": "One small daily habit they should start today.",
-      "warning": "One mistake their future self warns them about.",
-      "mantra": "A short memorable line they can repeat daily."
-    }
-  }
-  ```
+🎯 Who Is It For?
+Students planning their careers
+Working professionals seeking growth
+Career switchers
+Entrepreneurs and founders
+Lifelong learners
+Anyone looking for structured personal development
+💡 Problem Statement
 
-### 2. POST `/api/chat-futureme`
-Handles contextual follow-up questions from the user in an ongoing conversation.
-- **Request Body**:
-  ```json
-  {
-    "userProfile": {
-      "name": "Nitish",
-      "age": "23",
-      "goal": "Build a successful AI startup",
-      "struggle": "Lack of consistency",
-      "oneYearVision": "Running a profitable AI company",
-      "tone": "Brutally Honest"
-    },
-    "chatHistory": [
-      { "role": "user", "message": "Will I actually make it?" },
-      { "role": "futureme", "message": "Only if your daily actions stop negotiating..." }
-    ],
-    "question": "What should I focus on this week?"
-  }
-  ```
-- **Response**:
-  ```json
-  {
-    "success": true,
-    "reply": "..."
-  }
-  ```
+Traditional career platforms recommend courses or jobs but rarely provide a personalized roadmap that evolves with the individual.
 
----
+Becoming transforms AI into a personal mentor that understands where you are, where you want to go, and how to help you get there.
 
-## Key Custom Features Built for Demos
+🛠️ Tech Stack (Planned)
+HTML5
+CSS3
+JavaScript (ES6+)
+AI Integration (Future)
+FastAPI / Node.js (Future)
+PostgreSQL (Future)
+Authentication (Future)
+Cloud Deployment (Future)
+🚀 Future Roadmap
+AI-powered career planning
+Resume analysis
+Interview preparation
+Portfolio recommendations
+Skill assessments
+Weekly action plans
+Career analytics dashboard
+Voice conversations with your future self
+AI accountability partner
+Multi-agent career coaching
+🌍 Mission
 
-- **Adaptive Tone Behavior**: The prompt system directs Gemini to alter its personality dramatically based on the selected tone card (Motivational is inspiring; Brutally Honest is direct and strict; Calm Mentor is wise and grounded; CEO Mode is tactical and execution-driven).
-- **Safety JSON Cleaner**: If the AI model accidentally surrounds its output in markdown backticks (e.g. \`\`\`json ... \`\`\`), the server automatically sanitizes the string before parsing, preventing runtime JSON errors.
-- **Anti-Spam & Rate Limiting**: The generate and send buttons dynamically disable themselves and show elegant pulsing loading states during requests, preventing double clicks and connection drops.
-- **Self-contained Premium SVG Icons**: Every card and action contains optimized, self-contained SVG paths inside the HTML code. This guarantees the UI loads correctly and looks crisp on retina displays even if the system is completely offline.
+To empower millions of people to make better career decisions by helping them learn from the person they are becoming—not just the person they are today.
 
----
-Created with ❤️ for Nitish’s Founder Labs.
+💬 Tagline
+
+"Meet the version of you who already made it."
