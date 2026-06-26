@@ -1,4 +1,4 @@
-🚀 Becoming (formerly FutureMe)
+🚀 FutureMe
 
 Becoming is an AI-powered personal career planning and self-reflection platform that helps users bridge the gap between who they are today and who they aspire to become.
 
