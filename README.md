@@ -1,3 +1,5 @@
+<img width="782" height="766" alt="1780231172475" src="https://github.com/user-attachments/assets/8e40d361-e5d1-4314-8f60-c9db3fbc7f56" />
+
 🚀 FutureMe
 
 FutureMe is an AI-powered personal career planning and self-reflection platform that helps users bridge the gap between who they are today and who they aspire to become.
